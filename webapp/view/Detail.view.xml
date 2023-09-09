@@ -1,0 +1,210 @@
+<mvc:View controllerName="sap.ui.demo.walkthrough.controller.Detail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:suite="sap.suite.ui.commons"
+	xmlns:form="sap.ui.layout.form">
+	<Page title="{i18n>detailPageTitle} - {invoice>OrderNum}" showNavButton="true" navButtonPress=".onNavBack">
+		<content>
+			<Panel>
+				<ProgressIndicator width="100%" percentValue="{invoice>Percent}" displayValue="{invoice>Percent}%" showValue="true" state='Success'/>
+				<Panel class="sapUiNoContentPadding" headerText="Transportdetails"/>
+				<form:SimpleForm minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="1" labelSpanM="1" emptySpanL="1" emptySpanM="1" columnsL="1" columnsM="1">
+					<form:content>
+						<Label text="Status"/>
+						<Text text="{ path: 'invoice>Status', formatter: '.formatter.statusText' }"/>
+						<Label text="Auftragsnummer"/>
+						<Text text="{invoice>OrderNum}"/>
+						<Label text="Ziel"/>
+						<Text text="{invoice>Destination}"/>
+						<Label text="Anzahl gelieferter HU's"/>
+						<Text text="{invoice>Quantity}"/>
+						<Label text="Platznummer"/>
+						<Text text="{invoice>Placenum}"/>
+						<Label text="Gesamtzeit"/>
+						<Text text="{invoice>Duration}" width="100%"/>
+					</form:content>
+				</form:SimpleForm>
+				<Panel class="sapUiNoContentPadding" headerText="Kommissionierung"/>
+				<form:SimpleForm minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="1" labelSpanM="1" emptySpanL="1" emptySpanM="1" columnsL="1" columnsM="1">
+					<form:content>
+						<Label text="Startzeit"/>
+						<Text text="{
+								path: 'invoice>StartDate',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+					  				style: 'short',
+					  					source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+					 					}
+									}
+				  				} {
+								path: 'invoice>StartDate',
+								type: 'sap.ui.model.type.Time',
+								formatOptions: {
+					  				style: 'short',
+					  					source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+					 					}
+									}
+				  				}" width="100%"/>
+						<Label text="Endzeit"/>
+						<Text text="{
+								path: 'invoice>LoadDate',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+							  		style: 'short',
+							  			source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+							 			}
+									}
+						  		} {
+								path: 'invoice>LoadDate',
+								type: 'sap.ui.model.type.Time',
+								formatOptions: {
+							  		style: 'short',
+							  			source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+							 			}
+									}
+						  		}" width="100%"/>
+					</form:content>
+				</form:SimpleForm>
+				<Panel class="sapUiNoContentPadding" headerText="Laden"/>
+				<form:SimpleForm minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="1" labelSpanM="1" emptySpanL="1" emptySpanM="1" columnsL="1" columnsM="1">
+					<form:content>
+						<Label text="Startzeit"/>
+						<Text text="{
+								path: 'invoice>LoadDate',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+					  				style: 'short',
+					  					source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+					 					}
+									}
+				  				} {
+								path: 'invoice>LoadDate',
+								type: 'sap.ui.model.type.Time',
+								formatOptions: {
+					  				style: 'short',
+					  					source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+					 					}
+									}
+				  				}" width="100%"/>
+						<Label text="Endzeit"/>
+						<Text text="{
+								path: 'invoice>TranspDate',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+							  		style: 'short',
+							  			source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+							 			}
+									}
+						  		} {
+								path: 'invoice>TranspDate',
+								type: 'sap.ui.model.type.Time',
+								formatOptions: {
+							  		style: 'short',
+							  			source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+							 			}
+									}
+						  		}" width="100%"/>
+					</form:content>
+				</form:SimpleForm>
+				<Panel class="sapUiNoContentPadding" headerText="Transport"/>
+				<form:SimpleForm minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="1" labelSpanM="1" emptySpanL="1" emptySpanM="1" columnsL="1" columnsM="1">
+					<form:content>
+						<Label text="Startzeit"/>
+						<Text text="{
+								path: 'invoice>TranspDate',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+					  				style: 'short',
+					  					source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+					 					}
+									}
+				  				} {
+								path: 'invoice>TranspDate',
+								type: 'sap.ui.model.type.Time',
+								formatOptions: {
+					  				style: 'short',
+					  					source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+					 					}
+									}
+				  				}" width="100%"/>
+						<Label text="Endzeit"/>
+						<Text text="{
+								path: 'invoice>UnloadDate',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+							  		style: 'short',
+							  			source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+							 			}
+									}
+						  		} {
+								path: 'invoice>UnloadDate',
+								type: 'sap.ui.model.type.Time',
+								formatOptions: {
+							  		style: 'short',
+							  			source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+							 			}
+									}
+						  		}" width="100%"/>
+					</form:content>
+				</form:SimpleForm>
+				<Panel class="sapUiNoContentPadding" headerText="Entladen"/>
+				<form:SimpleForm minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="1" labelSpanM="1" emptySpanL="1" emptySpanM="1" columnsL="1" columnsM="1">
+					<form:content>
+						<Label text="Startzeit"/>
+						<Text text="{
+								path: 'invoice>UnloadDate',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+					  				style: 'short',
+					  					source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+					 					}
+									}
+				  				} {
+								path: 'invoice>UnloadDate',
+								type: 'sap.ui.model.type.Time',
+								formatOptions: {
+					  				style: 'short',
+					  					source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+					 					}
+									}
+				  				}" width="100%"/>
+						<Label text="Endzeit"/>
+						<Text text="{
+								path: 'invoice>EndDate',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+							  		style: 'short',
+							  			source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+							 			}
+									}
+						  		} {
+								path: 'invoice>EndDate',
+								type: 'sap.ui.model.type.Time',
+								formatOptions: {
+							  		style: 'short',
+							  			source: {
+											pattern: 'yyyy-MM-ddTHH:mm:ss'
+							 			}
+									}
+						  		}" width="100%"/>
+					</form:content>
+				</form:SimpleForm>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>
