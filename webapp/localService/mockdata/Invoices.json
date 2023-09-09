@@ -79,14 +79,14 @@
 		"Quantity": 26,
 		"Currency": 67,
 		"Destination": "893001",
-		"StartDate": "2023-05-01T11:28:00",
-		"LoadDate": "2023-05-02T09:51:00",
-		"TranspDate": "2023-05-02T12:03:00",
-		"UnloadDate": "2023-05-02T14:20:00",
+		"StartDate": "",
+		"LoadDate": "",
+		"TranspDate": "",
+		"UnloadDate": "",
 		"EndDate": "",
 		"Status": "A",
 		"Percent": "0",
 		"Placenum": "18-141-05",
-		"Duration": "1 Tag 2 Stunden 52 Minuten"
+		"Duration": ""
 	}
 ]
