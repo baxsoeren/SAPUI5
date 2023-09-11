@@ -6,7 +6,7 @@
 	<Page title="{i18n>detailPageTitle} - {invoice>OrderNum}" showNavButton="true" navButtonPress=".onNavBack">
 		<content>
 			<Panel>
-				<ProgressIndicator width="100%" percentValue="{invoice>Percent}" displayValue="{invoice>Percent}%" showValue="true" state='Success'/>
+				<ProgressIndicator width="100%" percentValue="{ path: 'invoice>Status', formatter: '.formatter.statusPercent' }" displayValue="{ path: 'invoice>Status', formatter: '.formatter.statusPercent' }%" showValue="true" state='Success'/>
 				<Panel class="sapUiNoContentPadding" headerText="Transportdetails"/>
 				<form:SimpleForm minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="1" labelSpanM="1" emptySpanL="1" emptySpanM="1" columnsL="1" columnsM="1">
 					<form:content>

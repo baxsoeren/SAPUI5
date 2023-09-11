@@ -10,7 +10,6 @@
 		"UnloadDate": "",
 		"EndDate": "",
 		"Status": "C",
-		"Percent": "40",
 		"Placenum": "18-141",
 		"Duration": "0 Tage 0 Stunden 11 Minuten"
 	},
@@ -25,7 +24,6 @@
 		"UnloadDate": "2023-05-04T15:37:00",
 		"EndDate": "2023-05-04T17:43:00",
 		"Status": "F",
-		"Percent": "100",
 		"Placenum": "18-141",
 		"Duration": "1 Tag 4 Stunden 15 Minuten"
 	},
@@ -40,7 +38,6 @@
 		"UnloadDate": "",
 		"EndDate": "",
 		"Status": "B",
-		"Percent": "20",
 		"Placenum": "18-141-05",
 		"Duration": ""
 	},
@@ -55,7 +52,6 @@
 		"UnloadDate": "2023-05-02T20:31:00",
 		"EndDate": "",
 		"Status": "E",
-		"Percent": "80",
 		"Placenum": "18-141",
 		"Duration": "0 Tage 5 Stunden 3 Minuten"
 	},
@@ -70,7 +66,6 @@
 		"UnloadDate": "",
 		"EndDate": "",
 		"Status": "D",
-		"Percent": "60",
 		"Placenum": "18-141",
 		"Duration": "1 Tag 3 Stunden 5 Minuten"
 	},
@@ -85,7 +80,6 @@
 		"UnloadDate": "",
 		"EndDate": "",
 		"Status": "A",
-		"Percent": "0",
 		"Placenum": "18-141-05",
 		"Duration": ""
 	}

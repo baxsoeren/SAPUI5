@@ -19,6 +19,24 @@ sap.ui.define([], function () {
 				default:
 					return sStatus;
 			}
+		},
+		statusPercent: function (sStatus) {
+			switch (sStatus) {
+				case "A":
+					return "00";
+				case "B":
+					return "20";
+				case "C":
+					return "40";
+				case "D":
+					return "60";
+				case "E":
+					return "80";
+				case "F":
+					return "100";
+				default:
+					return "99";
+			}
 		}
 	};
 });
