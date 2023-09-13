@@ -23,7 +23,7 @@ sap.ui.define([], function () {
 		statusPercent: function (sStatus) {
 			switch (sStatus) {
 				case "A":
-					return "00";
+					return "0";
 				case "B":
 					return "20";
 				case "C":
@@ -35,7 +35,26 @@ sap.ui.define([], function () {
 				case "F":
 					return "100";
 				default:
-					return "99";
+					return "Error";
+			}
+		},
+		getDuration: function (startDate, status, endDate) {
+			if(startDate != ''){
+				if(status == 'F'){
+					var startTime = new Date(startDate);
+					var endTime = new Date(endDate);
+				}else if(startDate != ""){
+					var startTime = new Date(startDate);
+					var endTime = new Date();
+				}	
+				var timeSpan = (endTime.getTime() - startTime.getTime())/1000;
+				var days = new String(`${timeSpan / 86400}`).split('.');
+				var hours = new String(`${('0.' + days[1]) * 24}`).split('.');
+				var minutes = new String(`${('0.' + hours[1]) * 60}`).split('.');
+				var durationTime = days[0] + ' Tag(e) ' + hours[0] + ' Stunde(n) ' + minutes[0] + ' Minute(n)';
+				return durationTime;
+			}else{
+				return '';
 			}
 		}
 	};

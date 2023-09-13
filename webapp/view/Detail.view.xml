@@ -21,7 +21,7 @@
 						<Label text="Platznummer"/>
 						<Text text="{invoice>Placenum}"/>
 						<Label text="Gesamtzeit"/>
-						<Text text="{invoice>Duration}" width="100%"/>
+						<Text text="{ parts: [{ path: 'invoice>StartDate' }, {path: 'invoice>Status'}, {path: 'invoice>EndDate'}], formatter: '.formatter.getDuration' }" width="100%"/>
 					</form:content>
 				</form:SimpleForm>
 				<Panel class="sapUiNoContentPadding" headerText="Kommissionierung"/>
