@@ -39,11 +39,11 @@ sap.ui.define([], function () {
 			}
 		},
 		getDuration: function (startDate, status, endDate) {
-			if(startDate != ''){
+			if(status != null && status != '' && status != 'A'){
 				if(status == 'F'){
 					var startTime = new Date(startDate);
 					var endTime = new Date(endDate);
-				}else if(startDate != ""){
+				}else if(startDate != ''){
 					var startTime = new Date(startDate);
 					var endTime = new Date();
 				}	
